@@ -6,16 +6,17 @@ import { BasePage } from "./BasePage";
 
 export class PageFactory {
   static getPage(driver: WebDriver, pageName: string) {
-    switch (pageName){
+    switch (pageName) {
       case "Home":
         return new HomePage(driver);
       case "Search":
         return new SearchPage(driver);
       case "TechSupport":
-        return new TechSupportPage(driver); 
+        return new TechSupportPage(driver);
       case "Base":
         return new BasePage(driver);
       default:
         return new BasePage(driver);
-    }}
+    }
+  }
 }
